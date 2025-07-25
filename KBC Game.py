@@ -1,5 +1,6 @@
 '''27 KBC Game'''
 import os
+import time
 que=["Who is the father of computer?"," What does CPU stand for?","Which of the following is an input device?","Which of the following is not a programming language?"," Which of these file extensions is used for Python files?"]
 a1=["A.Charles Babbage","B.Blaise Pascal","C.Howard H.Aiken","D.John Von Neuman"]
 a2=["A. Central Process Unit","B. Computer Processing Unit","C. Central Processing Unit","D. Control Processing Unit"]
@@ -19,8 +20,12 @@ for i in range(5):
         print(a[i][j])
     n=input("Enter the option:")
     if(n==c[i]):
+        print("Correct answer.")
+        time.sleep(2)
         total=total+100
     else:
+        print("wrong answer")
+        time.sleep(2)
         break
 os.system('cls')
 if(total==0):
